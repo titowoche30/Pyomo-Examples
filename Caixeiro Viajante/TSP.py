@@ -1,9 +1,7 @@
 import pyomo.environ as pyEnv
 
-path = "/home/tito/cplex/bin/x86-64_linux/cplex"
-cost_matrix = []
-
 ##-------------------------INSTANCE--------------------##
+cost_matrix = []
 file = open('17.txt')
 lines = file.readlines()
 file.close()
