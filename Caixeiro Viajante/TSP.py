@@ -1,5 +1,4 @@
 import pyomo.environ as pyEnv
-import numpy as np
 
 path = "/home/tito/cplex/bin/x86-64_linux/cplex"
 cost_matrix = []
