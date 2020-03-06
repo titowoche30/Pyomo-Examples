@@ -1,30 +1,19 @@
 import pyomo.environ as pyEnv
 
 path = "/home/tito/cplex/bin/x86-64_linux/cplex"
-custoMatrix = []
-aux = []
-aux2 = []
+cost_matrix = []
 
-##-------------------------LEITURA DA INSTANCIA--------------------##
-file = open('53.txt')
-linhas = file.readlines()
+##-------------------------LEITURA DA INSTÂNCIA--------------------##
+file = open('17.txt')
+lines = file.readlines()
 file.close()
-for i in range(len(linhas)):
-    vet = linhas[i][:-1]
-    vet = vet.split('\t')
-    vet = [int(i) for i in vet if i!= '']
-    aux2.append(vet)
 
-for sublist in aux2:
-    for item in sublist:
-        aux.append(item)
-        
-tam = len(aux)      
-for i in range(53,tam+1,53):
-    custoMatrix.append(aux[i-53:i])
+for i in range(len(lines)):
+    aux = lines[i][:-1].split('\t')
+    aux = [int(i) for i in aux if i!= '']
+    cost_matrix.append(aux)
 
-custoMatrix = custoMatrix[:-1]
-n = len(custoMatrix)
+n = len(cost_matrix)
 
 ##-------------------------DECLARACAO DO MODELO E SEUS PARAMETROS--------------------##
 
